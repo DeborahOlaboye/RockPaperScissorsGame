@@ -1,0 +1,146 @@
+:root {
+    --clr-background: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+    --clr-dark-text :hsl(229, 25%, 31%);
+    --clr-score-text: hsl(229, 64%, 46%);
+    --clr-header-outline : hsl(217, 16%, 45%);
+    --clr-scissors : hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+    --clr-paper: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+    --clr-rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+    --clr-lizard: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+    --clr-spock: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+  
+    --ff-base: "Barlow Semi Condensed";
+  
+    --fw-regular: 600;
+    --fw-bold: 700;
+}
+
+body {
+    background-color: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+}
+.game_header {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid var(--clr-header-outline);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+    width: 70%;
+}
+
+.game-container {
+    max-width: 85.375rem;
+    height: auto;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: hsl(214, 47%, 23%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container h1 {
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--ff-base);
+}
+
+.game-container h1 p {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.score-board {
+    font-size: 1.5em;
+    background-color: white;
+    font-family: var(--ff-base);
+    border: none;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1rem;
+}
+.score-board span {
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-family: var(--ff-base);
+    text-transform: uppercase;
+}
+
+.score {
+    font-weight: var(--fw-bold);
+}
+
+.choices {
+    position: relative;
+    width: 12.5rem;
+    height: 11.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choices {
+    position: relative;
+    width: 15.625rem; 
+    height: 13.75rem; 
+    margin: 0 auto;
+    background-image: url('images/bg-triangle.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.choice {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.choice:nth-child(1) { /* Rock */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.choice:nth-child(2) { /* Paper */
+    top: 0;
+    left: 0;
+}
+
+.choice:nth-child(3) { /* Scissors */
+    top: 0;
+    right: 0;
+}
+
+.choice:hover {
+    transform: scale(1.1);
+}
+
+.rules {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid var(--clr-header-outline);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+    align-self: flex-end;
+}
