@@ -16,7 +16,7 @@
 <body>
     <div class="step1-game">
         <div class="game_header">
-            <div><h1>Rock <p>Paper</p> Scissors</h1></div>
+            <div class="header">Rock <p>Paper</p> Scissors</div>
             <div class="score-board">
                 <span>Score</span>
                 <span class="score" id="score">0</span>
@@ -27,36 +27,46 @@
             <button class="choice" data-choice="paper"><img src="images/icon-paper.svg" alt="paper"></button>
             <button class="choice" data-choice="scissors"><img src="images/icon-scissors.svg" alt="scissors"></button>
         </div>
-        <div id="result"></div>
     <div class="rules">Rules</div>
+    <div class="rules-container">
+        <div class="rules-content">
+            <span class="close-btn">
+                <img src="images/icon-close.svg" alt="">
+            </span>
+            <img src="images/image-rules.svg" alt="Rules">
+        </div>
+    </div>
     </div> 
+    
     
     <div class="step4-game">
         <div class="game_header">
             <div class="header"><h1>Rock <p>Paper</p> Scissors</h1></div>
             <div class="score-board">
                 <span>Score</span>
-                <span class="score" id="score">0</span>
+                <span class="score">0</span>
             </div>
         </div>
         <div class="current_choice_container">
-            <div>
+            <div class="game">
                 <p class="pick">You Picked</p>
-                <button class="current_choice" data-choice="scissors"><img src="images/icon-scissors.svg" alt="paper"></button>
+                <button class="playerChoice current_choice"></button>
             </div>
-            <div id="lose" class="result">
+            <div id="win" class="result win" style="display: none;">
+                <p class="pick">You Win</p>
+                <button class="win-play">Play Again</button>
+            </div>
+            <div id="lose" class="result lose">
                 <p class="pick">You Lose</p>
                 <button class="lose-play">Play Again</button>
             </div>
-            <!-- <div id="win" class="result">
-                <p class="pick">You Win</p>
-                <button class="win-play">Play Again</button>
-            </div> -->
-            <div>
+            <div id="resultText" class="result-text" style="display: none;"></div>
+            <div class="game">
                 <p class="pick">The House Picked</p>
-                <button class="current_choice" data-choice="rock"><img src="images/icon-rock.svg" alt="rock"></button>
+                <button class="houseChoice current_choice"></button>
             </div>
         </div>
+        <div class="rules">Rules</div>
     </div>
 
     <div class="step3-game">
@@ -64,26 +74,49 @@
             <div class="header"><h1>Rock <p>Paper</p> Scissors</h1></div>
             <div class="score-board">
                 <span>Score</span>
+                <span class="score">0</span>
+            </div>
+        </div>
+        <div class="current_choice_container">
+            <div>
+                <p class="pick">You Picked</p>
+                <button class="playerChoice current_choice"></button>
+            </div>
+            <div>
+                <p class="pick">The House Picked</p>
+                <button class="houseChoice current_choice"></button>
+            </div>
+        </div>
+    <div class="rules">Rules</div>
+    </div>
+
+    <div class="step2-game">
+        <div class="game_header">
+            <div class="header"><h1>Rock <p>Paper</p> Scissors</h1></div>
+            <div class="score-board">
+                <span>Score</span>
                 <span class="score" id="score">0</span>
             </div>
         </div>
         <div class="current_choice_container">
             <div>
                 <p class="pick">You Picked</p>
-                <button class="current_choice" data-choice="scissors"><img src="images/icon-scissors.svg" alt="paper"></button>
+                <button class="playerChoice current_choice"></button>
             </div>
             <div>
                 <p class="pick">The House Picked</p>
-                <button class="current_choice" data-choice="rock"><img src="images/icon-rock.svg" alt="rock"></button>
+                <button class="houseChoice current_choice"></button>
             </div>
         </div>
     <div class="rules">Rules</div>
+
+    
+
     </div>
 
-
     
     
 
-  
+<script src="main.js"></script>
 </body>
 </html>
