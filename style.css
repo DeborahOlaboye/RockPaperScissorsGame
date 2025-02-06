@@ -193,8 +193,8 @@ body {
 
 .choice {
     position: absolute;
-    width: 10rem;
-    height: 10rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     background-color: white;
     display: flex;
