@@ -354,4 +354,8 @@ body {
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
+    .choices {
+        margin: 6rem;
+        width: 28rem;
+    }
 }
