@@ -80,9 +80,11 @@ body {
     text-transform: uppercase;
     font-family: var(--ff-base);
     font-weight: var(--fw-bold);
+    padding: 1rem 3rem;
+    font-size: 1rem;
     text-align: center;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .play {
@@ -95,11 +97,14 @@ body {
     border-radius: 5px;
 }
 
+
 .win-play {
     color: var(--clr-background);
     text-transform: uppercase;
     font-family: var(--ff-base);
     font-weight: var(--fw-bold);
+    padding: 1rem 3rem;
+    font-size: 1rem;
     text-align: center;
     cursor: pointer;
     border-radius: 5px;
@@ -145,6 +150,13 @@ body {
     text-transform: uppercase;
     color: white;
     font-size: 1.25rem;
+}
+.output {
+    font-family: var(--ff-base);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    color: white;
+    font-size: 2rem;
 }
 .current_choice_container {
     display: flex;

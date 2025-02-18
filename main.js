@@ -17,16 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const playerPickButton = document.querySelector(".playerChoice");
     const housePickButton = document.querySelector(".houseChoice");
-    const playerPickImage = document.querySelector(".playerChoice img");
-    const housePickImage = document.querySelector(".houseChoice img");
-    
 
     
-    const gameRules = {
-        rock: "images/icon-rock.svg",
-        paper: "images/icon-paper.svg",
-        scissors: "images/icon-scissors.svg"
-    };
+   
 
     choices.forEach(choice => {
         choice.addEventListener("click", () => {
@@ -43,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
     function displayResult(playerChoice, houseChoice) {
-        // const { result, updatedScore } = getWinner(playerChoice, houseChoice, score);
         
         let winElement = document.querySelector(".win");
         let loseElement = document.querySelector(".lose");
@@ -82,8 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 playerPickButton.setAttribute("data-choice", playerChoice);
                 housePickButton.setAttribute("data-choice", houseChoice);
 
-                // playerPickImage.src = gameRules[playerChoice];
-                // housePickImage.src = gameRules[houseChoice];
 
                 displayResult(playerChoice, houseChoice);
             }, 200);
