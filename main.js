@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const choices = document.querySelectorAll(".choice");
     const scoreElement = document.querySelector(".score");
     const loseButton = document.querySelector(".lose-play"); 
-    const playAgainButton = document.querySelector(".win-play"); 
+    const playAgainButton = document.querySelectorAll(".win-play"); 
     const rulesButton = document.querySelector(".rules");
     const rulesContainer = document.querySelector(".rules-container");
     const closeRules = document.querySelector(".close-btn");
@@ -39,15 +39,21 @@ document.addEventListener("DOMContentLoaded", () => {
         
         let winElement = document.querySelector(".win");
         let loseElement = document.querySelector(".lose");
+        let drawElement = document.querySelector(".draw");
         let scoreElement = document.querySelectorAll(".score");
 
         winElement.style.display = "none";
         loseElement.style.display = "none";
+        drawElement.style.display = "none";
 
-        if (playerChoice === houseChoice) {
+        if ((playerChoice === "rock" && houseChoice === "scissors") ||
+            (playerChoice === "scissors" && houseChoice === "paper") ||
+            (playerChoice === "paper" && houseChoice === "rock")) {
             winElement.style.display = "block";
             score += 1
-        } else {
+        } else if (playerChoice === houseChoice) {
+            drawElement.style.display = "block";
+        } else{
             loseElement.style.display = "block";
         }
 
@@ -86,7 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     loseButton.addEventListener("click", resetGame);
-    playAgainButton.addEventListener("click", resetGame);
+    playAgainButton.forEach(button => {
+        button.addEventListener("click", resetGame);
+    });
 
     // Rules Popup
     rulesButton.addEventListener("click", () => {
